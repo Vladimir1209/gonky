@@ -103,34 +103,34 @@
 	
 	function drawLines(){
 		ctx.drawImage(line, line.X, line.Y)
-		line.Y +=10
+		line.Y +=15
 		if (line.Y > 1792){
 			line.Y = -140
 		}
 		
 		ctx.drawImage(line2, line2.X, line2.Y)
-		line2.Y +=10
+		line2.Y +=15
 		if (line2.Y > 1792){
 			line2.Y = -140
 		}
 		ctx.drawImage(line3, line3.X, line3.Y)
-		line3.Y +=10
+		line3.Y +=15
 		if (line3.Y > 1792){
 			line3.Y = -140
 		}
 
 		ctx.drawImage(line4, line4.X, line4.Y)
-		line4.Y +=10
+		line4.Y +=15
 		if (line4.Y > 1792){
 			line4.Y = -140
 		}
 		ctx.drawImage(line5, line5.X, line5.Y)
-		line5.Y +=10
+		line5.Y +=15
 		if (line5.Y > 1792){
 			line5.Y = -140
 		}
 		ctx.drawImage(line6, line6.X, line6.Y)
-		line6.Y +=10
+		line6.Y +=15
 		if (line6.Y > 1792){
 			line6.Y = -140
 		}
@@ -147,8 +147,8 @@
 	}
 	
 	function drawMyCar(){
-		if(okLeft === true && myCar.X > 0) {myCar.X -=11}
-		if(okRight === true && myCar.X < 820) {myCar.X +=11}
+		if(okLeft === true && myCar.X > 0) {myCar.X -=16}
+		if(okRight === true && myCar.X < 820) {myCar.X +=16}
 	
 		ctx.drawImage(myCar, myCar.X, myCar.Y)
 	}
@@ -168,7 +168,7 @@
 	
 		if (!crash){
 			ctx.drawImage(enemyCar1, enemyCar1.X, enemyCar1.Y)
-			enemyCar1.Y +=9
+			enemyCar1.Y +=14
 			if (enemyCar1.Y > 1792){
 				enemyCar1.Y = -400
 				enemyCar1.X = Math.floor(Math.random()*800)
@@ -191,7 +191,7 @@
 	
 		if (!crash){
 			ctx.drawImage(enemyCar2, enemyCar2.X, enemyCar2.Y)
-			enemyCar2.Y +=9
+			enemyCar2.Y +=14
 			if (enemyCar2.Y > 1792){
 				enemyCar2.Y = -400
 				enemyCar2.X = Math.floor(Math.random()*800)
