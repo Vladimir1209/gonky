@@ -255,13 +255,15 @@
 		console.log(firstTouch)
 	}
 
-	function removeSelection() {
-   try {
-      document.selection
-         ? document.selection.empty()
-    : window.getSelection().removeAllRanges()
-      ;
-   } catch (err) { }
+
+</script>
+	
+<script type="text/javascript">
+document.ondblclick = function(evt) {
+    if (window.getSelection)
+        window.getSelection().removeAllRanges();
+    else if (document.selection)
+        document.selection.empty();
 }
 </script>
 
