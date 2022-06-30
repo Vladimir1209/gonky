@@ -4,9 +4,9 @@
 	<meta charset ="UTF-8">
 	<title>Игра гонки</title>
 </head>
-<body>
+<body width="828" height="1700">
 
-<canvas id="canvas" width="828" height="1700"></canvas>
+<canvas id="canvas" width="1000" height="2000"></canvas>
 <style type="text/css">
 	
 	.canvas { 
@@ -31,33 +31,33 @@
 	
 	var line = new Image()
 	line.src = "img/line.png"
-	line.X = 394
+	line.X = 500
 	line.Y = -140
 	
 	var line2 = new Image()
 	line2.src = "img/line.png"
-	line2.X = 394
+	line2.X = 500
 	line2.Y = 160
 
 	var line3 = new Image()
 	line3.src = "img/line.png"
-	line3.X = 394
+	line3.X = 500
 	line3.Y = 460
 
 	var line4 = new Image()
 	line4.src = "img/line.png"
-	line4.X = 394
+	line4.X = 500
 	line4.Y = 760
 
 	var line5 = new Image()
 	line5.src = "img/line.png"
-	line5.X = 394
+	line5.X = 500
 	line5.Y = 1060
 
 
 	var line6 = new Image()
 	line6.src = "img/line.png"
-	line6.X = 394
+	line6.X = 500
 	line6.Y = 1360
 
 	
@@ -77,9 +77,12 @@
 	enemyCar2.X = 600
 	enemyCar2.Y = -1800
 
+	
+
+
 	function drawRect(){
 		ctx.fillStyle = "Gray"
-		ctx.fillRect(0, 0, 828, 1792)
+		ctx.fillRect(0, 0, 1000, 2000)
 	}
 	
 	function drawLives(){
@@ -129,13 +132,13 @@
 		cancelAnimationFrame(myReq)
 		ctx.font = "150px Arial"
 		ctx.fillStyle = "Red"
-		ctx.fillText("Game over", 40, 750)
+		ctx.fillText("Game over", 120, 750)
 		stop = true
 	}
 	
 	function drawMyCar(){
 		if(okLeft === true && myCar.X > 0) {myCar.X -=11}
-		if(okRight === true && myCar.X < 650) {myCar.X +=11}
+		if(okRight === true && myCar.X < 820) {myCar.X +=11}
 	
 		ctx.drawImage(myCar, myCar.X, myCar.Y)
 	}
@@ -158,7 +161,7 @@
 			enemyCar1.Y +=9
 			if (enemyCar1.Y > 1792){
 				enemyCar1.Y = -400
-				enemyCar1.X = Math.floor(Math.random()*750)
+				enemyCar1.X = Math.floor(Math.random()*800)
 			}
 		}
 	}
@@ -181,7 +184,7 @@
 			enemyCar2.Y +=9
 			if (enemyCar2.Y > 1792){
 				enemyCar2.Y = -400
-				enemyCar2.X = Math.floor(Math.random()*750)
+				enemyCar2.X = Math.floor(Math.random()*800)
 			}
 		}
 	}   
@@ -233,11 +236,11 @@
 
 	function handleTouchStart(event){
 		const firstTouch = event.touches[0];
-		if (firstTouch.clientX > 414 && firstTouch.clientX < 828){
+		if (firstTouch.clientX > 500 && firstTouch.clientX < 1000){
 			okLeft = true
 			console.log(firstTouch)
 		}
-		if (firstTouch.clientX < 414){
+		if (firstTouch.clientX < 500){
 			okRight = true
 			console.log(firstTouch)
 		}
@@ -255,5 +258,6 @@
 
 </body>
 </html>
+
 
 
