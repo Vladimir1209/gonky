@@ -254,10 +254,18 @@
 		okLeft = false
 		console.log(firstTouch)
 	}
+
+	function removeSelection() {
+   try {
+      document.selection
+         ? document.selection.empty()
+    : window.getSelection().removeAllRanges()
+      ;
+   } catch (err) { }
+}
 </script>
 
 </body>
 </html>
-
 
 
