@@ -275,6 +275,23 @@ document.ondblclick = function(evt) {
     else if (document.selection)
         document.selection.empty();
 }
+	var tO = 0;
+$("#div1").on("touchstart", startTouch);
+$("#div1").on("touchend", endTouch);
+
+function startTouch(evt){
+    evt.preventDefault();
+    touchForce = evt.originalEvent.touches[0].force;
+    tO = window.setTimeout(function(){startTouch(evt)}, 100);
+    // Do something with touchForce
+}
+
+function endTouch(){
+    touchForce = 0;
+    window.clearTimeout(tO);
+    // Do something else
+}
+
 
 </script>
 
