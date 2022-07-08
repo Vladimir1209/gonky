@@ -45,7 +45,7 @@
 
 	resize()
 	
-	var lives = 5
+	var lives = 1
 	var okLeft = false		
 	var okRight = false	
 	
@@ -90,12 +90,12 @@
 	var enemyCar1 = new Image()
 	enemyCar1.src = "img/car3.png"
 	enemyCar1.X = 100
-	enemyCar1.Y = -960
+	enemyCar1.Y = -1160
 	
 	var enemyCar2 = new Image()
 	enemyCar2.src = "img/car4.png"
 	enemyCar2.X = 600
-	enemyCar2.Y = -1800
+	enemyCar2.Y = -2400
 
 	
 
@@ -113,34 +113,34 @@
 	
 	function drawLines(){
 		ctx.drawImage(line, line.X, line.Y)
-		line.Y +=18
+		line.Y +=22
 		if (line.Y > 1792){
 			line.Y = -140
 		}
 		
 		ctx.drawImage(line2, line2.X, line2.Y)
-		line2.Y +=18
+		line2.Y +=22
 		if (line2.Y > 1792){
 			line2.Y = -140
 		}
 		ctx.drawImage(line3, line3.X, line3.Y)
-		line3.Y +=18
+		line3.Y +=22
 		if (line3.Y > 1792){
 			line3.Y = -140
 		}
 
 		ctx.drawImage(line4, line4.X, line4.Y)
-		line4.Y +=18
+		line4.Y +=22
 		if (line4.Y > 1792){
 			line4.Y = -140
 		}
 		ctx.drawImage(line5, line5.X, line5.Y)
-		line5.Y +=18
+		line5.Y +=22
 		if (line5.Y > 1792){
 			line5.Y = -140
 		}
 		ctx.drawImage(line6, line6.X, line6.Y)
-		line6.Y +=18
+		line6.Y +=22
 		if (line6.Y > 1792){
 			line6.Y = -140
 		}
@@ -157,17 +157,17 @@
 	}
 	
 	function drawMyCar(){
-		if(okLeft === true && myCar.X > 0) {myCar.X -=20}
-		if(okRight === true && myCar.X < 820) {myCar.X +=20}
+		if(okLeft === true && myCar.X > -50) {myCar.X -=20}
+		if(okRight === true && myCar.X < 700) {myCar.X +=20}
 	
 		ctx.drawImage(myCar, myCar.X, myCar.Y)
 	}
 	
 	function drawEnemyCar1(){
 	
-		if (enemyCar1.Y+270 > myCar.Y && enemyCar1.X+180 > myCar.X && enemyCar1.X < myCar.X+180 && enemyCar1.Y < 1400){
+		if (enemyCar1.Y+525 > myCar.Y && enemyCar1.X+225 > myCar.X && enemyCar1.X < myCar.X+225 && enemyCar1.Y < 1600){
 			crash = true
-			enemyCar1.Y = enemyCar2.Y - 1440
+			enemyCar1.Y = enemyCar2.Y - 1740
 			lives--
 			if(lives <1){
 				stop()
@@ -178,19 +178,19 @@
 	
 		if (!crash){
 			ctx.drawImage(enemyCar1, enemyCar1.X, enemyCar1.Y)
-			enemyCar1.Y +=15
+			enemyCar1.Y +=20
 			if (enemyCar1.Y > 1792){
-				enemyCar1.Y = -400
-				enemyCar1.X = Math.floor(Math.random()*800)
+				enemyCar1.Y = -1000
+				enemyCar1.X = Math.floor(Math.random()*600)
 			}
 		}
 	}
 	
 	function drawEnemyCar2(){
 	
-		if (enemyCar2.Y+270 > myCar.Y && enemyCar2.X+180 > myCar.X && enemyCar2.X < myCar.X+180 && enemyCar2.Y < 1400){
+		if (enemyCar2.Y+525 > myCar.Y && enemyCar2.X+225 > myCar.X && enemyCar2.X < myCar.X+225 && enemyCar2.Y < 1600){
 			crash = true
-			enemyCar2.Y = enemyCar1.Y - 1440
+			enemyCar2.Y = enemyCar1.Y - 1940
 			lives--
 			if(lives <1){
 				stop()
@@ -201,10 +201,10 @@
 	
 		if (!crash){
 			ctx.drawImage(enemyCar2, enemyCar2.X, enemyCar2.Y)
-			enemyCar2.Y +=15
+			enemyCar2.Y +=20
 			if (enemyCar2.Y > 1792){
-				enemyCar2.Y = -400
-				enemyCar2.X = Math.floor(Math.random()*800)
+				enemyCar2.Y = -1000
+				enemyCar2.X = Math.floor(Math.random()*600)
 			}
 		}
 	}   
@@ -213,7 +213,7 @@
 		if (stop === true){return}
 	
 		drawRect()
-		drawLives()
+		
 		drawLines()
 		drawMyCar()
 		drawEnemyCar1()
@@ -282,6 +282,9 @@
 
 </body>
 </html>
+
+
+
 
 
 
