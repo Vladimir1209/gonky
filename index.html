@@ -89,12 +89,12 @@
 
 	var enemyCar1 = new Image()
 	enemyCar1.src = "img/car3.png"
-	enemyCar1.X = 100
+	enemyCar1.X = Math.floor(Math.random()*600)
 	enemyCar1.Y = -1160
 	
 	var enemyCar2 = new Image()
 	enemyCar2.src = "img/car4.png"
-	enemyCar2.X = 600
+	enemyCar2.X = Math.floor(Math.random()*600)
 	enemyCar2.Y = -2400
 
 	
@@ -182,7 +182,7 @@
 			enemyCar1.Y +=20
 			if (enemyCar1.Y > 1850){
 				enemyCar1.Y = -1000
-				enemyCar1.X = Math.floor(Math.random()*600)
+				enemyCar1.X = v
 			}
 		}
 	}
