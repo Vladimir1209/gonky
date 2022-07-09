@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset ="UTF-8">
-	<title>Игра гонки</title>
+	<title>StreetRacing</title>
 </head>
 <body id="bodyy">
 
@@ -180,7 +180,7 @@
 		if (!crash){
 			ctx.drawImage(enemyCar1, enemyCar1.X, enemyCar1.Y)
 			enemyCar1.Y +=20
-			if (enemyCar1.Y > 1792){
+			if (enemyCar1.Y > 1850){
 				enemyCar1.Y = -1000
 				enemyCar1.X = Math.floor(Math.random()*600)
 			}
@@ -203,7 +203,7 @@
 		if (!crash){
 			ctx.drawImage(enemyCar2, enemyCar2.X, enemyCar2.Y)
 			enemyCar2.Y +=20
-			if (enemyCar2.Y > 1792){
+			if (enemyCar2.Y > 1850){
 				enemyCar2.Y = -1000
 				enemyCar2.X = Math.floor(Math.random()*600)
 			}
