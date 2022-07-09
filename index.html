@@ -152,8 +152,9 @@
 		cancelAnimationFrame(myReq)
 		ctx.font = "150px Arial"
 		ctx.fillStyle = "Red"
-		ctx.fillText("Game over", 120, 750)
+		
 		stop = true
+		window.location.reload();
 	}
 	
 	function drawMyCar(){
